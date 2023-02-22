@@ -1,0 +1,27 @@
+{% load static %}
+{% load menu_tags %}
+
+
+<ul class="menu">
+    {% for item in menu_items %}
+        <li class="{% if item.active %}active{% endif %}">
+            <a href="{{ item.url }}">
+                {{ item.title }}
+            </a>
+            {% if item.children.exists %}
+                <ul>
+                    {% for child in item.children.all %}
+                        <li class="{% if child.active %}active{% endif %}">
+                            <a href="{{ child.url }}">
+                                {{ child.title }}
+                            </a>
+                            {% if child.children.exists %}
+                                {% draw_children child %}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
