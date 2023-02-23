@@ -17,6 +17,10 @@
  При выполнении задания из библиотек следует использовать только Django и стандартную библиотеку Python.
 
 
+<p align="left">
+     <a href="https://imgbb.com/"><img src="https://i.ibb.co/SdDscty/903158347.jpg" alt="903158347" border="0"></a>
+</p>
+
 
 ## Решение
 
